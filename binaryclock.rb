@@ -38,9 +38,7 @@ loop do
 
 	# Draws the populated clock array
 	system('cls') # Only works on Windows
-	clock_array.each do |row|
-		puts row.join("")
-	end
+	clock_array.each { |row| puts row.join("") }
 
 	# Adds a human-readable digital clock below the binary clock
 	digital = secs.strftime("%H%M%S")
