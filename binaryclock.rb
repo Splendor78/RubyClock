@@ -38,8 +38,8 @@ loop do
 
 	# Draws the populated clock array
 	system('cls') # Only works on Windows
-	clock_array.each do |inner|
-		puts inner.join("")
+	clock_array.each do |row|
+		puts row.join("")
 	end
 
 	# Adds a human-readable digital clock below the binary clock
