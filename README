@@ -2,4 +2,4 @@
 
 A simple clock written in ruby that continuously updates and displays the time on the command line/terminal in both binary and digital read-out.
 
-To run the clock simply run the binaryclock.rby file in your Windows console.
+To run the clock simply run the binaryclock.rb file in your Windows console.
