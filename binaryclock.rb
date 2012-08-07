@@ -1,9 +1,8 @@
 loop do
 	# Converts hours, minutes, and seconds to their own binary arrays
-	secs = Time.now
-	bin_hours_array = secs.hour.to_s(2).chars.to_a
-	bin_mins_array = secs.min.to_s(2).chars.to_a
-	bin_secs_array = secs.sec.to_s(2).chars.to_a
+	bin_hours_array = Time.now.hour.to_s(2).chars.to_a
+	bin_mins_array = Time.now.min.to_s(2).chars.to_a
+	bin_secs_array = Time.now.sec.to_s(2).chars.to_a
 
 	# Blank clock array			 
 	clock_array = [['   ','[ ]',' ','   ','[ ]',' ','   ','[ ]'],
@@ -40,9 +39,9 @@ loop do
 	clock_array.each { |row| puts row.join("") }
 
 	# Adds a human-readable digital clock below the binary clock
-	digital = secs.strftime("%H%M%S")
-	puts "\n " + digital[0] + '  ' + digital[1] + ' : ' + \
-	digital[2] + '  ' + digital[3] + ' : ' + digital[4] + '  ' + digital[5]
+	digital = Time.now.strftime("%H%M%S")
+    puts "\n %d  %d : %d  %d : %d  %d" % 
+        [digital[0],digital[1],digital[2],digital[3],digital[4],digital[5]]
 	
 	# Limits re-draw to every new second
 	sleep 1
